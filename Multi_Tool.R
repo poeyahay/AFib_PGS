@@ -138,15 +138,39 @@ Multi <- function(prs_files, prs_names, outPrefix, tuneid, pheno, keepid = "", l
         warning("Weighted PRS has lower R-squared, the inputs may have problems, please double-check.")
     }
 
-    # Prepare data for TSV output file
-    weight_data = data.table(
-        PRS_Name = c(prs_names, "Weighted_PRS"),
-        Weight = c(coef1[-1], "NA"),
-        Ngk_R2_Tune = c(r_values, r_weighted))
+    # Calculate SD for each PRS in the tuning set
+    sd_values = sapply(seq_along(prs_files), function(i) {
+        sd(dt.prs.all.tune[[paste0("SCORE1_SUM.", i)]], na.rm = TRUE)
+    })
 
-    # Write the TSV file!
-    writeLines(paste0("intercept: ", coef1[1]), con = paste0(outPrefix, ".weight.tsv")) # write intercept as the first line
-    fwrite(weight_data, file = paste0(outPrefix, ".weight.tsv"), sep = "\t", append = TRUE, col.names = TRUE, quote = FALSE) # write the weight and R-squared values as a TSV
+    # Prepare data for unscaled regression coefficients
+    weights_only <- as.numeric(coef1[-1])
+    proportions <- abs(weights_only) / sum(abs(weights_only)) * 100
+    regcoef_data = data.table(
+        PRS_Name = c(prs_names, "Weighted_PRS"),
+        Weight = c(weights_only, NA),
+        Proportion = c(proportions, NA),
+        Ngk_R2_Tune = c(r_values, r_weighted)
+    )
+
+    # Prepare data for mixing weights (weights * SD)
+    mixing_weights = weights_only * sd_values
+    mixing_proportions = abs(mixing_weights) / sum(abs(mixing_weights)) * 100
+    mixing_data = data.table(
+        PRS_Name = prs_names,
+        Mixing_Weight = mixing_weights,
+        Mixing_Proportion = mixing_proportions,
+        SD_in_Tune = sd_values
+    )
+
+    # Write the CSV files
+    regcoef_file = paste0(outPrefix, ".unscaled.regcoef.csv")
+    mixing_file = paste0(outPrefix, ".mixing.weights.csv")
+    # Unscaled regcoef file
+    writeLines(paste0("intercept: ", coef1[1]), con = regcoef_file)
+    fwrite(regcoef_data, file = regcoef_file, sep = ",", append = TRUE, col.names = TRUE, quote = FALSE, na = "NA")
+    # Mixing weights file
+    fwrite(mixing_data, file = mixing_file, sep = ",", col.names = TRUE, quote = FALSE)
 
     message("Done.")
     logger.end(log2file, logfile)
