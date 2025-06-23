@@ -8,11 +8,11 @@ EFFECT Effect_size  # Effect size (beta or log(OR))
 STDERR StdErr       # Standard error of the effect size
 PVALUE P_value      # p-value for association
 
-FREQ Freq           #Provide frequency column name
-AVERAGEFREQ ON      #Give average frequency as output column
+FREQ Freq           # Provide frequency column name
+AVERAGEFREQ ON      # Give average frequency as output column
 
-CUSTOMVARIABLE N_cases      #Make customvariables for N_cases, N_controls & N_total
-LABEL N_cases as N_cases    #1st is output column name, 2nd is input column name
+CUSTOMVARIABLE N_cases      # Make customvariables for N_cases, N_controls & N_total
+LABEL N_cases as N_cases    # 1st is output column name, 2nd is input column name
 CUSTOMVARIABLE N_controls
 LABEL N_controls as N_controls
 CUSTOMVARIABLE N_total
