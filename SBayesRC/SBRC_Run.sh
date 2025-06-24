@@ -16,7 +16,7 @@ apptainer      # run apptainer on HPC
 # The users can also use the container in Docker directly with the mapping volumes
 # same as the previous example
 ma_file="/add/your/input/file/path/here/EUR_AFGenMVP_SBayesRC_input.tsv"      # GWAS summary in COJO format (the only input)
-ld_folder="/add/your/LDref/file/path/here/ukbEUR_Imputed"                     # LD reference (download from "Resources")
+ld_folder="/add/your/LDref/file/path/here/ukbEUR_Imputed"                     # European LD reference (download from "Resources")
 annot="/add/your/annotation/file/path/here/annot_baseline2.2.txt"             # Functional annotation (download from "Resources")
 out_prefix="/add/your/output/file/path/here/EUR_Meta"                         # Output prefix, e.g. "./test"
 threads=16       # Number of CPU cores
