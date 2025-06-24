@@ -1,4 +1,4 @@
-for POP in EUR AMR ALL; do
+for i in SBP; do
 metal <<EOF
 # Paste the script in METAL
 SCHEME STDERR        # Use standard error for inverse variance weighted meta-analysis
@@ -11,18 +11,14 @@ PVALUE p             # p-value of the effect size
 FREQ freq            # Provide frequency column name
 AVERAGEFREQ ON       # Give average frequency as output column
 
-CUSTOMVARIABLE N            # Make customvariables for N, N_cases & N_controls
+CUSTOMVARIABLE N            # Make customvariables for N
 LABEL N as N                # 1st is output column name, 2nd is input column name
-CUSTOMVARIABLE N_cases
-LABEL N_cases as N_cases
-CUSTOMVARIABLE N_controls
-LABEL N_controls as N_controls
 
-PROCESS /add/your/input/file/path/here/AFGen_${POP}_metal_input_file.txt   # First GWAS summary statistics file
-PROCESS /add/your/input/file/path/here/MVP_${POP}_metal_input_file.txt     # Second GWAS summary statistics file
+PROCESS /add/your/input/file/path/here/${i}_Shi_metal_input_file.txt     # First GWAS summary statistics file
+PROCESS /add/your/input/file/path/here/${i}_MVP_metal_input_file.txt     # Second GWAS summary statistics file
 
 # Output the combined results (the 'space' indicates the prefix and suffix for METAL)
-OUTFILE /add/your/output/file/path/here/${POP}_meta_analysis_results .tbl
+OUTFILE /add/your/output/file/path/here/${i}_meta_analysis_results .tbl
 
 ANALYZE
 EOF
