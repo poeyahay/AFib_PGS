@@ -1,8 +1,8 @@
-for POP in EUR AMR ALL; do
+for POP in EUR AFR AMR ALL; do
 metal <<EOF
 # Paste the script in METAL
 SCHEME STDERR        # Use standard error for inverse variance weighted meta-analysis
-MARKER Markername    # chr:pos:ref:alt format
+MARKER CPRA          # chr:pos:ref:alt format
 ALLELE A1 A2         # Effect and alternate alleles
 EFFECT b             # Effect size (beta or log(OR))
 STDERR se            # Standard error of the effect size
