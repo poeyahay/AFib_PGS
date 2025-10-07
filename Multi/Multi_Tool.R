@@ -1,5 +1,6 @@
 #' @title Multi-tool: calculate the optimally weighted PRS using multiple PRS sets.
 #' @note Adapted from: https://github.com/zhilizheng/SBayesRC (GPL-3.0 License)
+#' @dependencies data.table_1.17.0, fmsb_0.7.6
 #' @author: Poeya Haydarlou
 
 # Example Usage:
@@ -59,6 +60,7 @@ Multi <- function(prs_files, prs_names, outPrefix, tuneid, pheno, keepid = "", l
     }
 
     # Read tuning IDs
+    library(data.table)
     dt.tune = fread(tuneid, head = FALSE, sep = ",")
     setnames(dt.tune, c("FID", "IID"))
     message(nrow(dt.tune), " tuning samples")

@@ -34,7 +34,8 @@ sbrcMulti <- function(prs1, prs2, outPrefix, tuneid, pheno, keepid="", log2file=
     if(log2file){
         message("Performing SBayesRC-multi...")
     } 
-
+    
+    library(data.table)
     dt.tune = fread(tuneid, head=FALSE, sep = ",")
     setnames(dt.tune, c("FID", "IID"))
     message(nrow(dt.tune), " tuning samples")
