@@ -15,7 +15,7 @@ The scripts are related to the manuscript:
 
 which was recently submitted to *Nature Communications* ([https://doi.org/10.21203/rs.3.rs-7713077/v1](https://doi.org/10.21203/rs.3.rs-7713077/v1)).
 
-## SBayesRC-multi and Adapted multi tool
+## SBayesRC-multi and Adapted multi tool ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
 [**SBayesRC-multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/SBRCmulti.R)
 - Handles two PGS input files.
 
@@ -28,9 +28,6 @@ which was recently submitted to *Nature Communications* ([https://doi.org/10.212
 - **Installation:**
   - No installation is needed, just run the code in Rstudio, and apply the function afterwards.
 - **License:**
-
-![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
-
   - [GNU General Public License](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/LICENSE)
 
 Example usage of the multi functions is given at the beginning of each multi script.
