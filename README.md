@@ -7,7 +7,7 @@
 
 ## Overview
 
-This GitHub repository contains scripts demonstrating how GWAS meta-analysis was performed using [**METAL**](https://github.com/poeyahay/AFib_PGS/tree/main/METAL), how polygenic scores were created using [**SBayesRC**](https://github.com/poeyahay/AFib_PGS/blob/main/SBayesRC/SBRC_Run.sh), and how multiple polygenic scoring files were combined using the [**SBayesRC-multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/SBRCmulti.R) (handles two PGS input files) and the [**Adapted multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/Multi_Tool.R) (handles more than two PGS input files).  
+This GitHub repository contains scripts demonstrating how GWAS meta-analysis was performed using [**METAL**](https://github.com/poeyahay/AFib_PGS/tree/main/METAL), how polygenic scores (PGS) were created using [**SBayesRC**](https://github.com/poeyahay/AFib_PGS/blob/main/SBayesRC/SBRC_Run.sh), and how multiple polygenic scoring files were combined using the [**SBayesRC-multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/SBRCmulti.R) (handles two PGS input files) and the [**Adapted multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/Multi_Tool.R) (handles more than two PGS input files).  
 
 The scripts are related to the manuscript:
 
