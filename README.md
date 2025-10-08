@@ -13,7 +13,8 @@ which was recently submitted to *Nature Communications* ([https://doi.org/10.212
   - handles two PGS input files
 - [**Adapted multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/Multi_Tool.R):
   - handles more than two PGS input files
-- **For both:**
+
+**For both:**
   - **Software requirements:**
     - This tool has been tested on RStudio (v4.5.0) and dependencies include data.table_1.17.0 and fmsb_0.7.6
   - **Installation:**
