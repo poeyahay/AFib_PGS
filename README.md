@@ -13,7 +13,7 @@ The scripts are related to the manuscript:
 
 *“Multi-trait polygenic risk scores improve genomic prediction of atrial fibrillation across diverse ancestries”*,
 
-which was recently submitted to *Nature Communications* ([https://doi.org/10.21203/rs.3.rs-7713077/v1](https://doi.org/10.21203/rs.3.rs-7713077/v1)).
+which was recently submitted to *Nature Communications* (Preprint: [https://doi.org/10.21203/rs.3.rs-7713077/v1](https://doi.org/10.21203/rs.3.rs-7713077/v1)).
 
 ## SBayesRC-multi and Adapted multi tool
 
