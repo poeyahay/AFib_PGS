@@ -40,7 +40,7 @@ Execution scripts on how GWAS meta-analysis was performed for:
 - [Atrial Fibrillation GWAS data](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/AFGen%2BMVP.sh)
 - [Systolic Blood Pressure GWAS data](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/SBP_trait.sh)
 
-### Resources and Runtime
+#### Resources and Runtime
 - 16 CPUs
 - ~70 GB of memory
 - Typical runtime of ~4.5 hours
