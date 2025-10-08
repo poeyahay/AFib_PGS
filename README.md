@@ -45,7 +45,7 @@ Execution scripts on how GWAS meta-analysis was performed for:
 - ~70 GB of memory
 - Typical runtime of ~4.5 hours
 
-These scripts were run on a high-performance computing cluster, after installation of METAL (v2011-03-25) (https://csg.sph.umich.edu/abecasis/metal/download/)
+These scripts were run on a high-performance computing (HPC) cluster, after installation of METAL (v2011-03-25) (https://csg.sph.umich.edu/abecasis/metal/download/)
 
 ## SBayesRC execution script
 [Execution script](https://github.com/poeyahay/AFib_PGS/blob/main/SBayesRC/SBRC_Run.sh) on how we created our polygenic scores using SBayesRC.
@@ -55,7 +55,7 @@ These scripts were run on a high-performance computing cluster, after installati
 - ~10 GB of memory
 - Typical runtime of ~5-10 minutes
 
-This script was also run on a high-performance computing cluster, after installation of the SBayesRC software (v0.2.6) (https://github.com/zhilizheng/SBayesRC)
+This script was also run on a HPC cluster, after installation of the SBayesRC software (v0.2.6) (https://github.com/zhilizheng/SBayesRC)
 
 ## Citation
 **If you use these scripts, please cite the following manuscript:**
