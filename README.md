@@ -9,18 +9,18 @@ The scripts are related to the manuscript:
 which was recently submitted to *Nature Communications* ([https://doi.org/10.21203/rs.3.rs-7713077/v1](https://doi.org/10.21203/rs.3.rs-7713077/v1)).
 
 ## SBayesRC-multi and Adapted multi tool
-- [**SBayesRC-multi**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/SBRCmulti.R):
-  - handles two PGS input files
-- [**Adapted multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/Multi_Tool.R):
-  - handles more than two PGS input files
+[**SBayesRC-multi**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/SBRCmulti.R):
+- handles two PGS input files
+[**Adapted multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/Multi_Tool.R):
+- handles more than two PGS input files
 
 **For both:**
-  - **Software requirements:**
-    - This tool has been tested on RStudio (v4.5.0) and dependencies include data.table_1.17.0 and fmsb_0.7.6
-  - **Installation:**
-    - No installation is needed, just run the code in Rstudio, and apply the function afterwards.
-  - **License:**
-    - [GNU General Public License](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/LICENSE)
+- **Software requirements:**
+  - This tool has been tested on RStudio (v4.5.0) and dependencies include data.table_1.17.0 and fmsb_0.7.6
+- **Installation:**
+  - No installation is needed, just run the code in Rstudio, and apply the function afterwards.
+- **License:**
+  - [GNU General Public License](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/LICENSE)
 
 Example usage of the multi functions is given at the beginning of each multi script
 
