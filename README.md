@@ -26,7 +26,7 @@ which was recently submitted to *Nature Communications* ([https://doi.org/10.212
 Example usage of the multi functions is given at the beginning of each multi script.
 
 ## METAL execution scripts
-Execution scripts on how GWAS meta-analysis was performed for the:
+Execution scripts on how GWAS meta-analysis was performed for:
 - [Atrial Fibrillation GWAS data](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/AFGen%2BMVP.sh)
 - [Systolic Blood Pressure GWAS data](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/SBP_trait.sh)
 
