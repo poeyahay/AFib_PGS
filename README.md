@@ -10,20 +10,20 @@ which was recently submitted to *Nature Communications* ([https://doi.org/10.212
 
 ## SBayesRC-multi and Adapted multi tool
 [**SBayesRC-multi**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/SBRCmulti.R)
-- handles two PGS input files
+- handles two PGS input files.
 
 [**Adapted multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/Multi_Tool.R)
-- handles more than two PGS input files
+- handles more than two PGS input files.
 
 **For both:**
 - **Software requirements:**
-  - This tool has been tested on RStudio (v4.5.0) and dependencies include data.table_1.17.0 and fmsb_0.7.6
+  - This tool has been tested on RStudio (v4.5.0) and dependencies include data.table_1.17.0 and fmsb_0.7.6.
 - **Installation:**
   - No installation is needed, just run the code in Rstudio, and apply the function afterwards.
 - **License:**
   - [GNU General Public License](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/LICENSE)
 
-Example usage of the multi functions is given at the beginning of each multi script
+Example usage of the multi functions is given at the beginning of each multi script.
 
 ## METAL execution scripts
 Execution scripts on how GWAS meta-analysis was performed for the:
