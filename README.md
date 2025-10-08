@@ -29,6 +29,7 @@ Example usage of the multi functions is given at the beginning of each multi scr
 Execution scripts on how GWAS meta-analysis was performed for the:
 - [Atrial Fibrillation GWAS data](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/AFGen%2BMVP.sh)
 - [Systolic Blood Pressure GWAS data](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/SBP_trait.sh)
+
 **Resources and Runtime:**
 - 16 CPUs
 - ~70 GB of memory
@@ -38,7 +39,8 @@ These scripts were run on a high performance computer, after installation of MET
 
 ## SBayesRC execution script
 [Execution script](https://github.com/poeyahay/AFib_PGS/blob/main/SBayesRC/SBRC_Run.sh) on how we created our polygenic scores using SBayesRC.
-Resources and Runtime:**
+
+**Resources and Runtime:**
 - 8 CPUs
 - ~10 GB of memory
 - Typical runtime of ~5-10 minutes
