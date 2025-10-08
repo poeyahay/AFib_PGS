@@ -25,7 +25,7 @@ These functions combine multiple polygenic score files into a single multi-PGS s
 [**Adapted multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/Multi_Tool.R)
 - Handles more than two PGS input files.
 
-**For both:**
+#### For both:
 - **Software requirements:**
   - This tool has been tested on RStudio (v4.5.0) and dependencies include data.table_1.17.0 and fmsb_0.7.6.
 - **Installation:**
@@ -40,7 +40,7 @@ Execution scripts on how GWAS meta-analysis was performed for:
 - [Atrial Fibrillation GWAS data](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/AFGen%2BMVP.sh)
 - [Systolic Blood Pressure GWAS data](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/SBP_trait.sh)
 
-#### Resources and Runtime
+#### Resources and Runtime:
 - 16 CPUs
 - ~70 GB of memory
 - Typical runtime of ~4.5 hours
@@ -50,7 +50,7 @@ These scripts were run on a high performance computer, after installation of MET
 ## SBayesRC execution script
 [Execution script](https://github.com/poeyahay/AFib_PGS/blob/main/SBayesRC/SBRC_Run.sh) on how we created our polygenic scores using SBayesRC.
 
-**Resources and Runtime:**
+#### Resources and Runtime:
 - 8 CPUs
 - ~10 GB of memory
 - Typical runtime of ~5-10 minutes
