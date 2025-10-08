@@ -28,7 +28,10 @@ which was recently submitted to *Nature Communications* ([https://doi.org/10.212
 - **Installation:**
   - No installation is needed, just run the code in Rstudio, and apply the function afterwards.
 - **License:**
-  - [GNU General Public License](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/LICENSE) ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
+
+![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
+
+  - [GNU General Public License](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/LICENSE)
 
 Example usage of the multi functions is given at the beginning of each multi script.
 
