@@ -24,7 +24,7 @@ which was recently submitted to *Nature Communications* ([https://doi.org/10.212
 
 **For both:**
 - **Software requirements:**
-  - This tool has been tested on RStudio ![R](https://img.shields.io/badge/R-4.5.0-blue) and dependencies include data.table_1.17.0 and fmsb_0.7.6.
+  - This tool has been tested on RStudio  ![R](https://img.shields.io/badge/R-4.5.0-blue)  and dependencies include data.table_1.17.0 and fmsb_0.7.6.
 - **Installation:**
   - No installation is needed, just run the code in Rstudio, and apply the function afterwards.
 - **License:**
