@@ -15,7 +15,10 @@ The scripts are related to the manuscript:
 
 which was recently submitted to *Nature Communications* ([https://doi.org/10.21203/rs.3.rs-7713077/v1](https://doi.org/10.21203/rs.3.rs-7713077/v1)).
 
-## SBayesRC-multi and Adapted multi tool ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
+## SBayesRC-multi and Adapted multi tool
+
+These functions combine multiple polygenic score files into a single multi-PGS score.
+
 [**SBayesRC-multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/SBRCmulti.R)
 - Handles two PGS input files.
 
@@ -37,7 +40,7 @@ Execution scripts on how GWAS meta-analysis was performed for:
 - [Atrial Fibrillation GWAS data](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/AFGen%2BMVP.sh)
 - [Systolic Blood Pressure GWAS data](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/SBP_trait.sh)
 
-**Resources and Runtime:**
+### Resources and Runtime
 - 16 CPUs
 - ~70 GB of memory
 - Typical runtime of ~4.5 hours
@@ -53,3 +56,9 @@ These scripts were run on a high performance computer, after installation of MET
 - Typical runtime of ~5-10 minutes
 
 This script was also run on a high performance computer, after installation of the SBayesRC software (v0.2.6) (https://github.com/zhilizheng/SBayesRC)
+
+## Citation
+If you use these scripts, please cite the following manuscript:
+
+*Haydarlou, P., et al.* “Multi-trait polygenic risk scores improve genomic prediction of atrial fibrillation across diverse ancestries.” *Nature Communications* (under review).  
+[Preprint DOI: 10.21203/rs.3.rs-7713077/v1](https://doi.org/10.21203/rs.3.rs-7713077/v1)
