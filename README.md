@@ -62,4 +62,4 @@ This script was also run on a HPC cluster, after installation of the SBayesRC so
 ## Citation
 **If you use these scripts, please cite the following manuscript:**
 
-*Haydarlou, P., et al.* “Multi-trait polygenic risk scores improve genomic prediction of atrial fibrillation across diverse ancestries.” *Nature Communications* (under review). [preprint DOI: 10.21203/rs.3.rs-7713077/v1](https://doi.org/10.21203/rs.3.rs-7713077/v1)
+*Haydarlou, P., et al.* “Multi-trait polygenic risk scores improve genomic prediction of atrial fibrillation across diverse ancestries.” *Nature Communications* (under review). preprint DOI: [10.21203/rs.3.rs-7713077/v1](https://doi.org/10.21203/rs.3.rs-7713077/v1)
