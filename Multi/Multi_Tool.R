@@ -5,9 +5,9 @@
 
 # Example Usage:
 # 1. Assign prs input file paths (IID SCORE1_SUM, with header)
-PRS1 = /path/to/PRS1.csv
-PRS2 = /path/to/PRS2.csv
-PRS3 = /path/to/PRS3.csv
+PRS1 = "/path/to/PRS1.csv"
+PRS2 = "/path/to/PRS2.csv"
+PRS3 = "/path/to/PRS3.csv"
 # 2. Assign function parameters
 prs_files = c(PRS1, PRS2, PRS3) # paths to the prs files (comma separated!)
 prs_names = c("PRS1", "PRS2", "PRS3") # names of the prs files
