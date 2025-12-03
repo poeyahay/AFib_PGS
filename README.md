@@ -25,7 +25,7 @@ These functions combine multiple polygenic score files into a single multi-PGS s
 [**Adapted multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/Multi_Tool.R)
 - Handles more than two PGS input files.
 
-#### For both multi tools:
+#### For both:
 - **Usage instructions**
   - Each script begins with a clear description of the required input formats and an example of how to call the function.
 - **Software requirements:**
