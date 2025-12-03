@@ -27,7 +27,7 @@ These functions combine multiple polygenic score files into a single multi-PGS s
 
 #### For both:
 - **Usage instructions**
-  - Each script begins with a clear description of the required input formats and an example of how to call the function.
+  - Each script begins with a description of the required input formats and an example of how to call the function.
 - **Software requirements:**
   - This tool has been tested on RStudio (v4.5.0) and dependencies include data.table_1.17.0 and fmsb_0.7.6.
 - **Installation:**
