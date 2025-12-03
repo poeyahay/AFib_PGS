@@ -45,8 +45,6 @@ These functions combine multiple polygenic score files into a single multi-PGS s
 
 **Of note:** The multi functions use logistic regression and are therefore suitable for binary outcomes only. However, the script can be adapted to perform linear regression and calculate the ordinary R² from the linear model (instead of Nagelkerke’s R²).
 
-Example usage of the multi functions is given at the beginning of each multi script.
-
 ## METAL execution scripts
 Execution scripts on how GWAS meta-analysis was performed for:
 - [Atrial Fibrillation GWAS data](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/AFGen%2BMVP.sh)
