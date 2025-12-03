@@ -25,13 +25,23 @@ These functions combine multiple polygenic score files into a single multi-PGS s
 [**Adapted multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/Multi_Tool.R)
 - Handles more than two PGS input files.
 
-#### For both:
+#### For both multi tools:
+- **Usage instructions**
+  - Each script begins with a clear description of the required input formats and an example of how to call the function.
 - **Software requirements:**
   - This tool has been tested on RStudio (v4.5.0) and dependencies include data.table_1.17.0 and fmsb_0.7.6.
 - **Installation:**
   - No installation is needed, just run the code in Rstudio, and apply the function afterwards.
 - **License:**
   - [GNU General Public License](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/LICENSE)
+
+#### Input (dummy) data:
+- [PRS1](https://drive.google.com/file/d/1pidftXIenQ5NYy_IrmX9hccsf5veX1zl/view?usp=drive_link)
+- [PRS2](https://drive.google.com/file/d/1iez_AQV9bQFqzHDeqAuXD_DXbqGoiVvG/view?usp=drive_link)
+- [PRS3](https://drive.google.com/file/d/1nqV3_YAlwzFHC2hai1f9V0KDqviiN0_5/view?usp=drive_link)
+- [tuneid](https://drive.google.com/file/d/16USsSVtZHhk9gb-vna6mYn3ngzLIPs86/view?usp=drive_link)
+- [pheno](https://drive.google.com/file/d/1Atuo9NX-wUJqkDRG4uRPLU7hBc5lKAAz/view?usp=drive_link)
+- [keepid](https://drive.google.com/file/d/1cFKB3VXLg72zKoeIh6zBSckz7Z1lKHwq/view?usp=drive_link)
 
 **Of note:** The multi functions use logistic regression and are therefore suitable for binary outcomes only. However, the script can be adapted to perform linear regression and calculate the ordinary R² from the linear model (instead of Nagelkerke’s R²).
 
