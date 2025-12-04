@@ -70,12 +70,12 @@ head -n $(awk "BEGIN {print int(0.3 * $(wc -l < shuf_AF_preTune.csv))}") shuf_AF
 pathFINAL='/path/to/Tune_Test/FINAL/'
 
 # Print only the first two columns (FID, IID) to create the tuning file
-cut -d',' -f1,2 AF_Tune_Check_File.csv > ${pathFINAL}AF_Tune_File.csv
+cut -d',' -f1,2 AF_Tune_Check_File.csv > ${pathFINAL}tuneid.csv
 
 
 ## If needed: Make an ancestry-specific tune file
-# Here an example for East Asian (EAS) ancestry
-awk -F, 'BEGIN {OFS=","} $4 == "eas" {print $1,$2}' AF_Tune_Check_File.csv > ${pathFINAL}AF_Tune_EAS.csv
+# Here an example for east asian (eas) ancestry
+awk -F, 'BEGIN {OFS=","} $4 == "eas" {print $1,$2}' AF_Tune_Check_File.csv > ${pathFINAL}tuneid_eas.csv
 
 
 #####################################################################################################################################
