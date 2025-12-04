@@ -1,4 +1,4 @@
-## Scoring the AF trait PGS in PLINK2 per chromosome
+### Scoring the AF trait PGS in PLINK2 per chromosome ###
 # --pfile: add the path to the genotype files in pgen/pvar/psam format
 # --score: add the path to the PGS score file (columns: CPRA (=chr:pos:ref:alt), SNP, A1, BETA)
 # --out: add the path and filename prefix for the output file

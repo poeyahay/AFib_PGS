@@ -1,5 +1,9 @@
+### Merge the output files together for each chromosome (to create ${trait}_Scored_File.txt) ###
+
+# Go to working directory
 cd /path/to/results
-## Merge the output files together for each chromosome (to create ${trait}_Scored_File.txt)
+
+## Merge!
 for trait in AF CAD Height PR BMI DCM HF SBP; do
   # Create an empty file to store the merged results
   > ${trait}_merged_PRS_interim.txt

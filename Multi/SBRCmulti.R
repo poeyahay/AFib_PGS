@@ -1,4 +1,4 @@
-### SBAYESRC-MULTI
+### SBAYESRC-MULTI ###
 # This script is used to calculate the weighted PRS from two PRS sets.
 
 # License: GPL
