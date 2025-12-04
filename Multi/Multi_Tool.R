@@ -11,7 +11,7 @@ PRS3 = "/path/to/PRS3.csv"
 # 2. Assign function parameters
 prs_files = c(PRS1, PRS2, PRS3) # paths to the prs files (comma separated!)
 prs_names = c("PRS1", "PRS2", "PRS3") # names of the prs files
-outPrefix = "/path/to/output/Out" # output path -> Out.score.txt & Out.weight.tsv
+outPrefix = "/path/to/output/Out" # output path -> Out.score.txt; Out.mixing.weights.csv; Out.unscaled.regcoef.csv
 tuneid = "/path/to/tuneid.csv" # path to tuning sample ID file (FID IID; no header; csv)
 pheno = "/path/to/pheno.csv" # path to phenotype file (FID IID pheno; no header; csv)
 keepid = "/path/to/keepid.csv" # path to sample IDs (FID IID) to be kept. default is "": use all samples
