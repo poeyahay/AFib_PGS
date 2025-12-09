@@ -24,6 +24,7 @@ This repository provides a full walkthrough of how we generated our multi-trait 
 For the traits atrial fibrillation (AF) and systolic blood pressure (SBP), we performed genome-wide association study (GWAS) meta-analyses using **METAL**.
 
 Pre- and postprocessing steps for METAL:
+
 Documented in the *Supplementary Materials* of our paper, in the section titled **“Meta-analysis using METAL”**.
 
 Execution scripts for each meta-analysis are available here:
