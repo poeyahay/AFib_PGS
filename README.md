@@ -63,10 +63,19 @@ Postprocessing steps for the SBayesRC outputs are detailed in the *Supplementary
 
 ## Score trait-specific PGSs with PLINK2
 
-The SBayesRC-derived polygenic *scoring* files—containing the columns **CPRA** (chromosome, position, reference allele, alternate allele), **SNP** (rsID), **A1** (effect/alternate allele), and **BETA** (effect size)—were scored with **PLINK2** within the All of Us biobank.  
+The SBayesRC-derived polygenic *scoring* files, containing the columns:
+- **CPRA** (chromosome, position, reference allele, alternate allele)
+- **SNP** (rsID)
+- **A1** (effect/alternate allele)
+- **BETA** (effect size)
+were scored with **PLINK2** within the All of Us biobank.
+
 Scoring was performed using this [script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Score.sh), which uses AF as an exemplary trait.
 
-The resulting trait-specific *scored* files were then merged into a single file, containing the summed scores across all chromosomes, with the columns **IID** (individual ID) and **SCORE1_SUM** (polygenic score per individual).  
+The resulting trait-specific *scored* files were then merged into a single file, containing the summed scores across all chromosomes, and the columns:
+- **IID** (individual ID)
+- **SCORE1_SUM** (polygenic score per individual)
+
 Merging was performed using the following [script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Merge.sh) 
 
 
@@ -98,7 +107,7 @@ These functions combine multiple polygenic *scored* files into a single multi-PG
 - **License:**
   - [GNU General Public License](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/LICENSE)
 
-#### Input (dummy) data:
+#### Dummy data:
 - [PRS1](https://drive.google.com/file/d/1pidftXIenQ5NYy_IrmX9hccsf5veX1zl/view?usp=drive_link)
 - [PRS2](https://drive.google.com/file/d/1iez_AQV9bQFqzHDeqAuXD_DXbqGoiVvG/view?usp=drive_link)
 - [PRS3](https://drive.google.com/file/d/1nqV3_YAlwzFHC2hai1f9V0KDqviiN0_5/view?usp=drive_link)
