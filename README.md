@@ -103,7 +103,7 @@ These functions combine multiple polygenic *scored* files into a single multi-PG
 - **Usage instructions**
   - Each script begins with a description of the required input formats and an example of how to call the function.
 - **Software requirements:**
-  - This tool has been tested on RStudio (v4.5.0) and dependencies include data.table_1.17.8 and fmsb_0.7.6.
+  - This tool has been tested on RStudio (v4.5.0) and dependencies include `data.table_1.17.8` and `fmsb_0.7.6`.
 - **Installation:**
   - No installation is needed, just run the code in Rstudio, and apply the function afterwards.
 - **License:**
@@ -150,7 +150,7 @@ Three inputs are needed for the analysis script:
 3. **Ancestry-specific AF prevalence** within All of Us — computed during step 6 of the [Split_TuneVal.sh](https://github.com/poeyahay/AFib_PGS/blob/main/Split%20Dataset/Split_TuneVal.sh) script and required for liability R² estimation.
 
 **Software requirements:**
-  - This tool has been tested on RStudio (v4.5.0) and dependencies include dplyr_1.1.4, data.table_1.17.8, pROC_1.19.0.1, PRROC_1.4, fmsb_0.7.6, and ggplot2_4.0.0.
+  - This tool has been tested on RStudio (v4.5.0) and dependencies include `dplyr_1.1.4`, `data.table_1.17.8`, `pROC_1.19.0.1`, `PRROC_1.4`, `fmsb_0.7.6`, and `ggplot2_4.0.0`.
 
 #### Dummy data:
 - [PGS_Dataset](https://drive.google.com/file/d/1OY-vnxmUq-1l1IdVrqyfd0tksRHKNFYS/view?usp=drive_link)
