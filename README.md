@@ -38,9 +38,9 @@ Required pre- and postprocessing steps are documented in the *Supplementary Mate
 
 #### Resources and Runtime:
 
-- 16 CPUs
-- ~70 GB of memory
-- Typical runtime of ~4.5 hours
+- 8 CPUs
+- ~10 GB of memory
+- Typical runtime of ~5-10 minutes
 
 These scripts were run on a high-performance computing (HPC) cluster, after installation of METAL [(v2011-03-25)](https://csg.sph.umich.edu/abecasis/metal/download/)
 
@@ -60,9 +60,9 @@ Relevant subsections include:
 
 #### Resources and Runtime:
 
-- 8 CPUs
-- ~10 GB of memory
-- Typical runtime of ~5-10 minutes
+- 16 CPUs
+- ~70 GB of memory
+- Typical runtime of ~4.5 hours
 
 This script was also run on a HPC cluster, after installation of the SBayesRC software [(v0.2.6)](https://github.com/zhilizheng/SBayesRC)
 
