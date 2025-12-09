@@ -2,7 +2,7 @@
 
 This repository provides a full walkthrough of how we generated our multi-trait polygenic scores (PGSs) related to the manuscript:
 
-*[“Multi-trait polygenic risk scores improve genomic prediction of atrial fibrillation across diverse ancestries]([https://pmc.ncbi.nlm.nih.gov/articles/PMC12622184/](https://pmc.ncbi.nlm.nih.gov/articles/PMC12622184/))*
+*[“Multi-trait polygenic risk scores improve genomic prediction of atrial fibrillation across diverse ancestries](https://pmc.ncbi.nlm.nih.gov/articles/PMC12622184/)*
 
 ## Table of contents
 
