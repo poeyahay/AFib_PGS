@@ -11,7 +11,7 @@ This repository provides a full walkthrough of how we generated our multi-trait 
 3. [Run SBayesRC](#run-sbayesrc)
 4. [Postprocess SBayesRC output](#postprocess-sbayesrc-output)
 5. [Score trait-specific PGSs with PLINK2](#score-trait-specific-pgss-with-plink2)
-6. [Split dataset (30% tuning, 70% testing)](#split-dataset-30-tuning-70-testing)
+6. [Split dataset](#split-dataset)
 7. [Multi tool functions](#multi-tool-functions)
 8. [Generate the final multi-trait PGS file](#generate-the-final-multi-trait-pgs-file)
 9. [Score again with PLINK2](#score-again-with-plink2)
@@ -96,7 +96,7 @@ The resulting per-chromosome *scored* files were then merged into a single *scor
 
 Merging was performed using this [bash shell script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Merge.sh)
 
-## Split dataset (30% tuning, 70% testing)
+## Split dataset
 
 Before combining the trait-specific *scored* files using the [Multi tool functions](#multi-tool-functions), we split the All of Us biobank dataset into:
 
