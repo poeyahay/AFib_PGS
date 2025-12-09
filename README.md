@@ -197,7 +197,8 @@ Three inputs are needed for the analysis script:
 
 **Software requirements:**
 
-- RStudio v4.5.0
+RStudio v4.5.0
+
 - `dplyr_1.1.4`
 - `data.table_1.17.8`
 - `pROC_1.19.0.1`
