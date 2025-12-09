@@ -56,7 +56,7 @@ Relevant subsections include:
 
 ## Run SBayesRC
 
-[Execution script](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/02.%20SBayesRC/SBRC_Run.sh) on how we created polygenic scoring files using SBayesRC.
+[Execution script](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/02.%20SBayesRC/SBRC_Run.sh) on how we created polygenic *scoring* files using SBayesRC.
 
 #### Resources and Runtime:
 
@@ -82,7 +82,7 @@ The SBayesRC-derived polygenic *scoring* files, containing the following columns
 
 - `CPRA` — chromosome, position, reference allele, alternate allele
 - `SNP` — rsID
-- `A1` — effect/alternate allele
+- `A1` — effect / alternate allele
 - `BETA` — effect size
 
 were scored with **PLINK2** within the All of Us biobank.
@@ -98,7 +98,7 @@ Merging was performed using this [Bash Shell Script](https://github.com/poeyahay
 
 ## Split dataset
 
-Before combining the trait-specific *scored* files using the [Multi tool functions](#multi-tool-functions), we split the All of Us biobank dataset into:
+Before combining the trait-specific *scored* files using the [Multi tool function](#multi-tool-functions), we split the All of Us biobank dataset into:
 
 - **30% tuning set**
 - **70% testing / validation set**
@@ -176,8 +176,8 @@ Finally, we used this [Analysis Script](https://github.com/poeyahay/AF_MultiTrai
 - Performance metrics were then extracted from these models.
 
 The analysis script requires **two helper functions**:
-1. **[Summary_Table.R](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/07.%20Analyze/02.%20Summary_Table.R)** — generates a summary table with performance metrics
-2. **[LiabR2_func.R](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/07.%20Analyze/03.%20LiabR2_func.R)** — computes liability R²  
+1. [Summary_Table.R](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/07.%20Analyze/02.%20Summary_Table.R) — generates a summary table with performance metrics
+2. [LiabR2_func.R](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/07.%20Analyze/03.%20LiabR2_func.R) — computes liability R²  
 
 It also requires **three inputs**:
 
@@ -197,7 +197,7 @@ It also requires **three inputs**:
 2. **POP_IIDs.csv** files (e.g., `AFR_IIDs.csv`)
    - Single column (`IID`) listing individuals of a specific ancestry
    - Required for ancestry-specific validation analyses
-3. **Ancestry-specific AF prevalence** within All of Us
+3. **Ancestry-specific AF prevalence** within 'All of Us'
    - Computed during step 6 of the [Split Dataset](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/04.%20Split%20Dataset/Split_TuneVal.sh) script
    - Required for liability R² estimation
 
