@@ -1,4 +1,4 @@
-## iOverview
+## Overview
 
 This repository provides a full walkthrough of how we generated our multi-trait polygenic scores (PGSs) related to the manuscript:
 
@@ -189,15 +189,21 @@ Three inputs are needed for the analysis script:
 **Important:** Exclude all tuning-set IIDs from this dataset before running the analysis.
 
 2. **POP_IIDs.csv** files (e.g., `AFR_IIDs.csv`)
-   - Single column (`IID`) listing individuals of a specific ancestry.  
-   - Required for ancestry-specific validation analyses.
+   - Single column (`IID`) listing individuals of a specific ancestry
+   - Required for ancestry-specific validation analyses
 3. **Ancestry-specific AF prevalence** within All of Us
-   - Computed during step 6 of the [Split_TuneVal.sh](https://github.com/poeyahay/AFib_PGS/blob/main/Split%20Dataset/Split_TuneVal.sh) script  
+   - Computed during step 6 of the [Split Dataset](https://github.com/poeyahay/AFib_PGS/blob/main/Split%20Dataset/Split_TuneVal.sh) script
    - Required for liability R² estimation
 
 **Software requirements:**
 
-- Tested on RStudio (v4.5.0); Dependencies include `dplyr_1.1.4`, `data.table_1.17.8`, `pROC_1.19.0.1`, `PRROC_1.4`, `fmsb_0.7.6`, and `ggplot2_4.0.0`.
+- RStudio v4.5.0
+- `dplyr_1.1.4`
+- `data.table_1.17.8`
+- `pROC_1.19.0.1`
+- `PRROC_1.4`
+- `fmsb_0.7.6`
+- `ggplot2_4.0.0`
 
 #### Dummy data:
 
