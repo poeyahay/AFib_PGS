@@ -6,7 +6,7 @@ This repository provides a full walkthrough of how we generated our multi-trait 
 
 ## Table of contents
 
-1. [GWAS meta-analysis for AF and SBP using METAL](#gwas-meta-analysis-for-af-and-sbp-using-metal)
+1. [GWAS meta-analysis using METAL](#gwas-meta-analysis-using-metal)
 2. [Preprocess trait-specific GWAS summary statistics](#preprocess-trait-specific-gwas-summary-statistics)
 3. [Run SBayesRC](#run-sbayesrc)
 4. [Postprocess SBayesRC output](#postprocess-sbayesrc-output)
@@ -19,7 +19,7 @@ This repository provides a full walkthrough of how we generated our multi-trait 
 
   *** [Citation](#citation)
 
-## GWAS meta-analysis for AF and SBP using METAL
+## GWAS meta-analysis using METAL
 
 For the traits atrial fibrillation (AF) and systolic blood pressure (SBP), we performed genome-wide association study (GWAS) meta-analyses using **METAL**.
 
@@ -123,10 +123,12 @@ These functions combine multiple polygenic *scored* files into a single multi-PG
 [**SBayesRC-multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/SBRCmulti.R)
 
 - Handles two PGS input files.
+- Used in our paper for the **multi-ancestry** method.
 
 [**Adapted multi tool**](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/Multi_Tool.R)
 
 - Handles more than two PGS input files.
+- Used in our paper for the **multi-trait** method
 
 #### For both:
 
