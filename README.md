@@ -25,13 +25,13 @@ For the traits atrial fibrillation (AF) and systolic blood pressure (SBP), we pe
 
 Required pre- and postprocessing steps are documented in the *Supplementary Materials* of our paper, within the subsections:
 
-- **Meta-analysis using METAL**
+- Meta-analysis using METAL
   - *Preparation of summary statistics for meta-analysis*
   - *Input file formatting*
   - *Data conversion and preprocessing*
   - *Output processing*
 
-Execution scripts for each meta-analysis are available here:
+**Execution scripts for each meta-analysis are available here:**
 
 - [Atrial Fibrillation GWAS](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/AFGen%2BMVP.sh)
 - [Systolic Blood Pressure GWAS](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/SBP_trait.sh)
@@ -50,7 +50,7 @@ Preprocessing steps for the trait-specific GWAS summary statistics, before SBaye
 
 Relevant subsections include:
 
-- **PGS generation using SBayesRC**
+- PGS generation using SBayesRC
   - *Input file formatting*
   - *Data conversion and preprocessing*
 
@@ -72,13 +72,13 @@ Postprocessing steps for the SBayesRC outputs are detailed in the *Supplementary
 
 Relevant subsections include:
 
-- **PGS generation using SBayesRC**
+- PGS generation using SBayesRC
   - *Output processing*
   - *Full alignment with All of Us variants*
 
 ## Score trait-specific PGSs with PLINK2
 
-The SBayesRC-derived polygenic *scoring* files, containing the columns:
+The SBayesRC-derived polygenic *scoring* files, containing the following columns:
 
 - `CPRA`  chromosome, position, reference allele, alternate allele
 - `SNP`  rsID
@@ -87,14 +87,14 @@ The SBayesRC-derived polygenic *scoring* files, containing the columns:
 
 were scored with **PLINK2** within the All of Us biobank.
 
-Scoring was performed using this [bash shell script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Score.sh), which uses AF as an exemplary trait.
+Scoring was performed per chromosome, using this [bash shell script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Score.sh), with AF used as an example trait.
 
-The resulting trait-specific *scored* files were then merged into a single file, containing the summed scores across all chromosomes, and the columns:
+The resulting per-chromosome *scored* files were then merged into a single *scored* file, with the following columns:
 
 - `IID`  individual ID
 - `SCORE1_SUM`  polygenic score per individual
 
-Merging was performed using the following [bash shell script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Merge.sh)
+Merging was performed using this [bash shell script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Merge.sh)
 
 ## Split dataset (30% tuning, 70% testing)
 
