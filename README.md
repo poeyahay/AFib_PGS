@@ -7,7 +7,7 @@ This repository provides a full walkthrough of how we generated our multi-trait 
 Preprint available on PubMed: [https://pmc.ncbi.nlm.nih.gov/articles/PMC12622184/](https://pmc.ncbi.nlm.nih.gov/articles/PMC12622184/).
 
 
-## Walkthrough
+## Table of contents
 1. [GWAS meta-analysis for AF and SBP using METAL](#gwas-meta-analysis-for-af-and-sbp-using-metal)
 2. [Preprocess trait-specific GWAS summary statistics](#preprocess-trait-specific-gwas-summary-statistics)
 3. [Run SBayesRC](#run-sbayesrc)
