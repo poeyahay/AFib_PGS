@@ -33,8 +33,8 @@ Required pre- and postprocessing steps are documented in the *Supplementary Mate
 
 **Execution scripts for each meta-analysis are available here:**
 
-- [Atrial Fibrillation GWAS](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/AFGen%2BMVP.sh)
-- [Systolic Blood Pressure GWAS](https://github.com/poeyahay/AFib_PGS/blob/main/METAL/SBP_trait.sh)
+- [Atrial Fibrillation GWAS](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/01.%20METAL/AFGen%2BMVP.sh)
+- [Systolic Blood Pressure GWAS](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/01.%20METAL/SBP_trait.sh)
 
 #### Resources and Runtime:
 
@@ -56,7 +56,7 @@ Relevant subsections include:
 
 ## Run SBayesRC
 
-[Execution script](https://github.com/poeyahay/AFib_PGS/blob/main/SBayesRC/SBRC_Run.sh) on how we created polygenic scoring files using SBayesRC.
+[Execution script](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/02.%20SBayesRC/SBRC_Run.sh) on how we created polygenic scoring files using SBayesRC.
 
 #### Resources and Runtime:
 
