@@ -131,11 +131,11 @@ These functions combine multiple polygenic *scored* files into a single multi-PG
 #### For both:
 
 - **Usage instructions**
-  - Each script begins with a description of the required input formats and an example of how to call the function.
+  - Each script begins with the required input formats and an example function call.
 - **Software requirements:**
-  - This tool has been tested on RStudio (v4.5.0) and dependencies include `data.table_1.17.8` and `fmsb_0.7.6`.
+  - Tested on RStudio (v4.5.0); Dependencies include `data.table_1.17.8` and `fmsb_0.7.6`.
 - **Installation:**
-  - No installation is needed, just run the code in Rstudio, and apply the function afterwards.
+  - No installation needed; run the code in RStudio and call the function.
 - **License:**
   - [GNU General Public License](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/LICENSE)
 
@@ -147,14 +147,24 @@ These functions combine multiple polygenic *scored* files into a single multi-PG
 
 ## Generate the final multi-trait PGS file
 
-We then used the following [bash shell script](https://github.com/poeyahay/AFib_PGS/blob/main/06.%20Combine/Combi.sh) to combine the eight trait-specific polygenic *scoring* files into a single multi-trait *scoring* file (`CPRA`, `SNP`, `A1`, `BETA`).
+We used the following [bash shell script](https://github.com/poeyahay/AFib_PGS/blob/main/06.%20Combine/Combi.sh) to combine the eight trait-specific polygenic *scoring* files into a single multi-trait *scoring* file (`CPRA`, `SNP`, `A1`, `BETA`).
 
-**How we did this:**
-For each trait-specific *scoring* file, the SNP-level effect sizes (BETA) were multiplied by that trait’s unscaled regression coefficient, obtained from the **.unscaled.regcoef.csv** output of the adapted Multi tool. SNPs shared across trait-specific files were then matched, and their updated effect sizes were summed. This produced the final combined multi-trait PGS *scoring* file.
+**Procedure:**
+
+1. For each trait-specific *scoring* file, the SNP-level effect sizes (`BETA`) were multiplied by that trait’s **unscaled regression coefficient**, obtained from the `.unscaled.regcoef.csv` output of the adapted Multi tool.
+2. SNPs shared across trait-specific files were matched.
+3. The updated effect sizes for matched SNPs were summed.
+
+The result is the final combined multi-trait PGS *scoring* file.
 
 ## Score again with PLINK2
 
-To [analyze the results and extract performance metrics](#analyze-results-and-extract-performance-metrics), we scored the multi-trait *scoring* file (`CPRA`, `SNP`, `A1`, `BETA`) [using PLINK2 and then merged the resulting per-chromosome outputs](#score-trait-specific-pgss-with-plink2) again, to produce the multi-trait *scored* file (`IID`, `SCORE1_SUM`).
+To [analyze the results and extract performance metrics](#analyze-results-and-extract-performance-metrics), we scored the multi-trait *scoring* file (columns: `CPRA`, `SNP`, `A1`, `BETA`) with **PLINK2**.
+
+The per-chromosome outputs were then merged ([see scoring &amp; merging](#score-trait-specific-pgss-with-plink2)) to produce the final multi-trait *scored* file with columns:
+
+- `IID` — individual ID
+- `SCORE1_SUM` — polygenic score per individual
 
 ## Analyze results and extract performance metrics
 
@@ -179,7 +189,7 @@ Three inputs are needed for the analysis script:
 
 **Software requirements:**
 
-- This tool has been tested on RStudio (v4.5.0) and dependencies include `dplyr_1.1.4`, `data.table_1.17.8`, `pROC_1.19.0.1`, `PRROC_1.4`, `fmsb_0.7.6`, and `ggplot2_4.0.0`.
+- Tested on RStudio (v4.5.0); Dependencies include `dplyr_1.1.4`, `data.table_1.17.8`, `pROC_1.19.0.1`, `PRROC_1.4`, `fmsb_0.7.6`, and `ggplot2_4.0.0`.
 
 #### Dummy data:
 
