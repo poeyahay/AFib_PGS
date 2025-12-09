@@ -121,16 +121,9 @@ These functions combine multiple polygenic *scored* files into a single multi-PG
 
 ## Generate the final multi-trait PGS file
 
-Next, we used the following [script](https://github.com/poeyahay/AFib_PGS/blob/main/06.%20Combine/Combi.sh) to combine the eight trait-specific polygenic *scoring* files into a single multi-trait *scoring* file (CPRA, SNP, A1, BETA). 
-
-How we did this:
-
-We multiplied the effect size (BETA) of each SNP within a trait-specific *scoring* file with its unscaled regression coefficient, derived from **.unscaled.regcoef.csv** from the adapted multi-tool output. Therafter, we summed the re-calculated beta's for the SNPs that matched across trait-specific *scoring* files, creating the final multi-PGS *scoring* file.
-
-## Generate the final multi-trait PGS file
-
 We then used the following [script](https://github.com/poeyahay/AFib_PGS/blob/main/06.%20Combine/Combi.sh) to combine the eight trait-specific polygenic *scoring* files into a single multi-trait *scoring* file (CPRA, SNP, A1, BETA).  
 
+**How we did this:**
 For each trait-specific *scoring* file, the SNP-level effect sizes (BETA) were multiplied by that trait’s unscaled regression coefficient, obtained from the **.unscaled.regcoef.csv** output of the adapted Multi tool. SNPs shared across trait-specific files were then matched, and their updated effect sizes were summed. This produced the final combined multi-trait PGS *scoring* file.
 
 
