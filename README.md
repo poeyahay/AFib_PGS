@@ -64,18 +64,18 @@ Postprocessing steps for the SBayesRC outputs are detailed in the *Supplementary
 ## Score trait-specific PGSs with PLINK2
 
 The SBayesRC-derived polygenic *scoring* files, containing the columns:
-   - `CPRA`: chromosome, position, reference allele, alternate allele
-   - `SNP`: rsID
-   - `A1`: effect/alternate allele
-   - `BETA`: effect size
+   - `CPRA`  chromosome, position, reference allele, alternate allele
+   - `SNP`  rsID
+   - `A1`  effect/alternate allele
+   - `BETA`  effect size
 
 were scored with **PLINK2** within the All of Us biobank.
 
 Scoring was performed using this [script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Score.sh), which uses AF as an exemplary trait.
 
 The resulting trait-specific *scored* files were then merged into a single file, containing the summed scores across all chromosomes, and the columns:
-   - `IID`: individual ID
-   - `SCORE1_SUM`: polygenic score per individual
+   - `IID`  individual ID
+   - `SCORE1_SUM`  polygenic score per individual
 
 Merging was performed using the following [script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Merge.sh) 
 
@@ -134,12 +134,12 @@ Finally, we used this [script](https://github.com/poeyahay/AFib_PGS/blob/main/07
 
 Three inputs are needed for the analysis script:
 1. **PGS_Dataset.csv** — includes the following columns:  
-   - `IID`: individual ID
+   - `IID`  individual ID
    - `age`  
-   - `sex_at_birth`: male = 1, female = 0; flip if you prefer female = 1
-   - `from_MA`: 1 = from Massachusetts, 0 = not
-   - `has_VA`: 1 = has Veterans Affairs affiliation, 0 = not
-   - `case_control`: 1 = AF case, 0 = control
+   - `sex_at_birth`  male = 1, female = 0; flip if you prefer female = 1
+   - `from_MA`  1 = from Massachusetts, 0 = not
+   - `has_VA`  1 = has Veterans Affairs affiliation, 0 = not
+   - `case_control`  1 = AF case, 0 = control
    - polygenic *scored* file (PGS per IID)
    - principal components (`PC1–PC20`)
 
