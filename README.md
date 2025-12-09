@@ -17,13 +17,15 @@ This repository provides a full walkthrough of how we generated our multi-trait 
 9. [Score again with PLINK2](#score-again-with-plink2)
 10. [Analyze results and extract performance metrics](#analyze-results-and-extract-performance-metrics)
 
-  ** [Citation](#citation)
+  *** [Citation](#citation)
 
 ## GWAS meta-analysis for AF and SBP using METAL
 
 For the traits atrial fibrillation (AF) and systolic blood pressure (SBP), we performed genome-wide association study (GWAS) meta-analyses using **METAL**.
 
-Required pre- and postprocessing steps: Documented in the *Supplementary Materials* of our paper, in the section titled **“Meta-analysis using METAL”**.
+Required pre- and postprocessing steps are documented in the *Supplementary Materials* of our paper, within the section:
+
+- **Meta-analysis using METAL**
 
 Execution scripts for each meta-analysis are available here:
 
@@ -67,8 +69,8 @@ Postprocessing steps for the SBayesRC outputs are detailed in the *Supplementary
 Relevant sections include:
 
 - **PGS generation using SBayesRC**
-   - *Output processing*
-   - *Full alignment with All of Us variants*
+  - *Output processing*
+  - *Full alignment with All of Us variants*
 
 ## Score trait-specific PGSs with PLINK2
 
