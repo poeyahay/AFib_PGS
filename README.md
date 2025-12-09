@@ -83,7 +83,7 @@ Merging was performed using the following [script](https://github.com/poeyahay/A
 
 Before combining the trait-specific *scored* files using the [Multi tool functions](#multi-tool-functions), we split the All of Us biobank dataset into a **30% tuning set** and a **70% testing set** using the following [script](https://github.com/poeyahay/AFib_PGS/blob/main/Split%20Dataset/Split_TuneVal.sh).
 
-This [script](https://github.com/poeyahay/AFib_PGS/blob/main/Split%20Dataset/Split_TuneVal.sh) also generates the **pheno.csv** and **tuneid.csv** files required as input for the Multi tool, and computes the **AF prevalence** in the biobank dataset, which is needed for the liability \(R^2\) calculation used later in the section:  
+This script also generates the **pheno.csv** and **tuneid.csv** files required as input for the Multi tool, and computes the **AF prevalence** in the biobank dataset, which is needed for the liability R² calculation used later in the section:  
 [Analyze results and extract performance metrics](#analyze-results-and-extract-performance-metrics).
 
 
