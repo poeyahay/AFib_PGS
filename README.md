@@ -18,6 +18,7 @@ Steps:
 8. [Generate the final multi-trait PGS file](#generate-the-final-multi-trait-pgs-file)
 9. [Score again with PLINK2](#score-again-with-plink2)
 10. [Analyze results and extract performance metrics](#analyze-results-and-extract-performance-metrics)
+
 ** [Citation](#citation)
 
 ## GWAS meta-analysis for AF and SBP using METAL
