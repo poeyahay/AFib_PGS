@@ -122,22 +122,22 @@ These functions combine multiple polygenic *scored* files into a single multi-PG
 
 [**SBayesRC-multi tool**](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/05.%20Multi%20tools/01.%20SBRCmulti.R)
 
-- Handles two PGS input files.
-- Used in our paper for the **multi-ancestry** method.
+- Handles two PGS input files
+- Used in our paper for the **multi-ancestry** method
 
 [**Adapted multi tool**](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/05.%20Multi%20tools/02.%20Multi_Tool.R)
 
-- Handles more than two PGS input files.
+- Handles more than two PGS input files
 - Used in our paper for the **multi-trait** method
 
 #### For both:
 
 - **Usage instructions**
-  - Each script begins with the required input formats and an example function call.
+  - Each script begins with the required input formats and an example function call
 - **Software requirements:**
-  - Tested on RStudio (v4.5.0); Dependencies include `data.table_1.17.8` and `fmsb_0.7.6`.
+  - Tested on RStudio (v4.5.0); Dependencies include `data.table_1.17.8` and `fmsb_0.7.6`
 - **Installation:**
-  - No installation needed; run the code in RStudio and call the function.
+  - No installation needed; run the code in RStudio and call the function
 - **License:**
   - [GNU General Public License](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/05.%20Multi%20tools/LICENSE)
 
@@ -153,9 +153,9 @@ We used the following [Bash Shell Script](https://github.com/poeyahay/AF_MultiTr
 
 **Procedure:**
 
-1. For each trait-specific *scoring* file, the SNP-level effect sizes (`BETA`) were multiplied by that trait’s **unscaled regression coefficient**, obtained from the `.unscaled.regcoef.csv` output of the adapted Multi tool.
-2. SNPs shared across trait-specific files were matched.
-3. The updated effect sizes for matched SNPs were summed.
+1. For each trait-specific *scoring* file, the SNP-level effect sizes (`BETA`) were multiplied by that trait’s **unscaled regression coefficient**, obtained from the `.unscaled.regcoef.csv` output of the adapted Multi tool
+2. SNPs shared across trait-specific files were matched
+3. The updated effect sizes for matched SNPs were summed
 
 The result is the final combined **multi-trait PGS *scoring* file**.
 
@@ -172,8 +172,8 @@ The per-chromosome outputs were then merged ([see scoring &amp; merging](#score-
 
 Finally, we used this [Analysis Script](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/07.%20Analyze/01.%20Analyze_metrics.R) to fit logistic regression models with the multi-trait PGS as predictor.
 
-- Models were adjusted for the first 20 principal components, age, and sex.
-- Performance metrics were then extracted from these models.
+- Models were adjusted for the first 20 principal components, age, and sex
+- Performance metrics were then extracted from these models
 
 The analysis script requires **two helper functions**:
 1. [Summary_Table.R](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/07.%20Analyze/02.%20Summary_Table.R) — generates a summary table with performance metrics
