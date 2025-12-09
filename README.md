@@ -23,9 +23,13 @@ This repository provides a full walkthrough of how we generated our multi-trait 
 
 For the traits atrial fibrillation (AF) and systolic blood pressure (SBP), we performed genome-wide association study (GWAS) meta-analyses using **METAL**.
 
-Required pre- and postprocessing steps are documented in the *Supplementary Materials* of our paper, within the section:
+Required pre- and postprocessing steps are documented in the *Supplementary Materials* of our paper, within the subsections:
 
 - **Meta-analysis using METAL**
+  - *Preparation of summary statistics for meta-analysis*
+  - *Input file formatting*
+  - *Data conversion and preprocessing*
+  - *Output processing*
 
 Execution scripts for each meta-analysis are available here:
 
@@ -44,7 +48,7 @@ These scripts were run on a high-performance computing (HPC) cluster, after inst
 
 Preprocessing steps for the trait-specific GWAS summary statistics, before SBayesRC input, are detailed in the *Supplementary Materials* of our paper.
 
-Relevant sections include:
+Relevant subsections include:
 
 - **PGS generation using SBayesRC**
   - *Input file formatting*
@@ -66,7 +70,7 @@ This script was also run on a HPC cluster, after installation of the SBayesRC so
 
 Postprocessing steps for the SBayesRC outputs are detailed in the *Supplementary Materials* of our paper.
 
-Relevant sections include:
+Relevant subsections include:
 
 - **PGS generation using SBayesRC**
   - *Output processing*
