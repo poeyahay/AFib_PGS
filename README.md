@@ -1,4 +1,4 @@
-## Overview
+## iOverview
 
 This repository provides a full walkthrough of how we generated our multi-trait polygenic scores (PGSs) related to the manuscript:
 
@@ -159,7 +159,7 @@ The result is the final combined **multi-trait PGS *scoring* file**.
 
 ## Score again with PLINK2
 
-To [evaluate the multi-trait PGS](#analyze-results-and-extract-performance-metrics), we scored the multi-trait *scoring* file (columns: `CPRA`, `SNP`, `A1`, `BETA`) with **PLINK2**.
+To [evaluate the multi-trait PGS](#analyze-results-and-extract-performance-metrics), we scored the multi-trait *scoring* file ( `CPRA`, `SNP`, `A1`, `BETA`) with **PLINK2**.
 
 The per-chromosome outputs were then merged ([see scoring &amp; merging](#score-trait-specific-pgss-with-plink2)) to produce the final multi-trait *scored* file with columns:
 
@@ -168,24 +168,32 @@ The per-chromosome outputs were then merged ([see scoring &amp; merging](#score-
 
 ## Analyze results and extract performance metrics
 
-Finally, we used this [script](https://github.com/poeyahay/AFib_PGS/blob/main/07.%20Analyze/Analyze_metrics.R) to fit logistic regression models with the multi-trait PGS as predictor, adjusting for the first 20 principal components as well as age and sex. Performance metrics were then extracted from these models.
+Finally, we used this [Analysis Script](https://github.com/poeyahay/AFib_PGS/blob/main/07.%20Analyze/Analyze_metrics.R) to fit logistic regression models with the multi-trait PGS as predictor.
+
+- Models were adjusted for the first 20 principal components, age, and sex.
+- Performance metrics were then extracted from these models.
 
 Three inputs are needed for the analysis script:
 
-1. **PGS_Dataset.csv**; Includes the following columns:
+1. **PGS_Dataset.csv**; Contains the following columns:
+
    - `IID` — individual ID
    - `age`
    - `sex_at_birth` — male = 1, female = 0; flip if you prefer female = 1
    - `from_MA` — 1 = from Massachusetts, 0 = not
    - `has_VA` — 1 = has Veterans Affairs affiliation, 0 = not
    - `case_control` — 1 = AF case, 0 = control
-   - polygenic *scored* file — PGS per IID
+   - polygenic *scored* file — PGS value per individual
    - principal components — `PC1–PC20`
 
-**Important:** Exclude all tuning-set IIDs.
+**Important:** Exclude all tuning-set IIDs from this dataset before running the analysis.
 
-2. **POP_IIDs.csv** files (e.g., `AFR_IIDs.csv`) — each file contains a single column (`IID`) listing individuals belonging to a specific ancestry group. These files are needed for ancestry-specific validation analyses.
-3. **Ancestry-specific AF prevalence** within All of Us — computed during step 6 of the [Split_TuneVal.sh](https://github.com/poeyahay/AFib_PGS/blob/main/Split%20Dataset/Split_TuneVal.sh) script and required for liability R² estimation.
+2. **POP_IIDs.csv** files (e.g., `AFR_IIDs.csv`)
+   - Single column (`IID`) listing individuals of a specific ancestry.  
+   - Required for ancestry-specific validation analyses.
+3. **Ancestry-specific AF prevalence** within All of Us
+   - Computed during step 6 of the [Split_TuneVal.sh](https://github.com/poeyahay/AFib_PGS/blob/main/Split%20Dataset/Split_TuneVal.sh) script  
+   - Required for liability R² estimation
 
 **Software requirements:**
 
