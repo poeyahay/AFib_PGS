@@ -64,17 +64,18 @@ Postprocessing steps for the SBayesRC outputs are detailed in the *Supplementary
 ## Score trait-specific PGSs with PLINK2
 
 The SBayesRC-derived polygenic *scoring* files, containing the columns:
-- **CPRA** (chromosome, position, reference allele, alternate allele)
-- **SNP** (rsID)
-- **A1** (effect/alternate allele)
-- **BETA** (effect size)
+   - `CPRA`: chromosome, position, reference allele, alternate allele
+   - `SNP`: rsID
+   - `A1`: effect/alternate allele
+   - `BETA`: effect size
+
 were scored with **PLINK2** within the All of Us biobank.
 
 Scoring was performed using this [script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Score.sh), which uses AF as an exemplary trait.
 
 The resulting trait-specific *scored* files were then merged into a single file, containing the summed scores across all chromosomes, and the columns:
-- **IID** (individual ID)
-- **SCORE1_SUM** (polygenic score per individual)
+   - `IID`: individual ID
+   - `SCORE1_SUM`: polygenic score per individual
 
 Merging was performed using the following [script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Merge.sh) 
 
@@ -109,12 +110,7 @@ These functions combine multiple polygenic *scored* files into a single multi-PG
   - [GNU General Public License](https://github.com/poeyahay/AFib_PGS/blob/main/Multi/LICENSE)
 
 #### Dummy data:
-- [PRS1](https://drive.google.com/file/d/1pidftXIenQ5NYy_IrmX9hccsf5veX1zl/view?usp=drive_link)
-- [PRS2](https://drive.google.com/file/d/1iez_AQV9bQFqzHDeqAuXD_DXbqGoiVvG/view?usp=drive_link)
-- [PRS3](https://drive.google.com/file/d/1nqV3_YAlwzFHC2hai1f9V0KDqviiN0_5/view?usp=drive_link)
-- [tuneid](https://drive.google.com/file/d/16USsSVtZHhk9gb-vna6mYn3ngzLIPs86/view?usp=drive_link)
-- [pheno](https://drive.google.com/file/d/1Atuo9NX-wUJqkDRG4uRPLU7hBc5lKAAz/view?usp=drive_link)
-- [keepid](https://drive.google.com/file/d/1cFKB3VXLg72zKoeIh6zBSckz7Z1lKHwq/view?usp=drive_link)
+- [PRS1](https://drive.google.com/file/d/1pidftXIenQ5NYy_IrmX9hccsf5veX1zl/view?usp=drive_link) • [PRS2](https://drive.google.com/file/d/1iez_AQV9bQFqzHDeqAuXD_DXbqGoiVvG/view?usp=drive_link) • [PRS3](https://drive.google.com/file/d/1nqV3_YAlwzFHC2hai1f9V0KDqviiN0_5/view?usp=drive_link) • [tuneid](https://drive.google.com/file/d/16USsSVtZHhk9gb-vna6mYn3ngzLIPs86/view?usp=drive_link) • [pheno](https://drive.google.com/file/d/1Atuo9NX-wUJqkDRG4uRPLU7hBc5lKAAz/view?usp=drive_link) • [keepid](https://drive.google.com/file/d/1cFKB3VXLg72zKoeIh6zBSckz7Z1lKHwq/view?usp=drive_link)
 
 **Of note:** The multi functions use logistic regression and are therefore suitable for binary outcomes only. However, the script can be adapted to perform linear regression and calculate the ordinary R² from the linear model (instead of Nagelkerke’s R²).
 
@@ -138,15 +134,16 @@ Finally, we used this [script](https://github.com/poeyahay/AFib_PGS/blob/main/07
 
 Three inputs are needed for the analysis script:
 1. **PGS_Dataset.csv** — includes the following columns:  
-   - `IID` (individual ID)  
+   - `IID`: individual ID
    - `age`  
-   - `sex_at_birth` (male = 1, female = 0; flip if you prefer female = 1)  
-   - `from_MA` (1 = from Massachusetts, 0 = not)  
-   - `has_VA` (1 = has Veterans Affairs affiliation, 0 = not)  
-   - `case_control` (1 = AF case, 0 = control)  
-   - polygenic *scored* file (PGS per IID)  
-   - principal components (`PC1–PC20`)  
-   **Important:** Exclude all tuning-set IIDs.
+   - `sex_at_birth`: male = 1, female = 0; flip if you prefer female = 1
+   - `from_MA`: 1 = from Massachusetts, 0 = not
+   - `has_VA`: 1 = has Veterans Affairs affiliation, 0 = not
+   - `case_control`: 1 = AF case, 0 = control
+   - polygenic *scored* file (PGS per IID)
+   - principal components (`PC1–PC20`)
+
+**Important:** Exclude all tuning-set IIDs.
 
 2. **POP_IIDs.csv** files (e.g., `AFR_IIDs.csv`) — each file contains a single column (`IID`) listing individuals belonging to a specific ancestry group. These files are needed for ancestry-specific validation analyses.
 
