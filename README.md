@@ -71,18 +71,18 @@ The SBayesRC-derived polygenic *scoring* files, containing the columns:
 
 were scored with **PLINK2** within the All of Us biobank.
 
-Scoring was performed using this [script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Score.sh), which uses AF as an exemplary trait.
+Scoring was performed using this [bash shell script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Score.sh), which uses AF as an exemplary trait.
 
 The resulting trait-specific *scored* files were then merged into a single file, containing the summed scores across all chromosomes, and the columns:
    - `IID`  individual ID
    - `SCORE1_SUM`  polygenic score per individual
 
-Merging was performed using the following [script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Merge.sh) 
+Merging was performed using the following [bash shell script](https://github.com/poeyahay/AFib_PGS/blob/main/Scoring%20with%20PLINK2/Merge.sh) 
 
 
 ## Split dataset (30% tuning, 70% testing)
 
-Before combining the trait-specific *scored* files using the [Multi tool functions](#multi-tool-functions), we split the All of Us biobank dataset into a **30% tuning set** and a **70% testing set** using the following [script](https://github.com/poeyahay/AFib_PGS/blob/main/Split%20Dataset/Split_TuneVal.sh).
+Before combining the trait-specific *scored* files using the [Multi tool functions](#multi-tool-functions), we split the All of Us biobank dataset into a **30% tuning set** and a **70% testing set** using the following [bash shell script](https://github.com/poeyahay/AFib_PGS/blob/main/Split%20Dataset/Split_TuneVal.sh).
 
 This script also generates the **pheno.csv** and **tuneid.csv** files required as input for the Multi tool, and computes the **AF prevalence** in the biobank dataset, which is needed for the liability R² calculation used later in the section: 
 
@@ -103,7 +103,7 @@ These functions combine multiple polygenic *scored* files into a single multi-PG
 - **Usage instructions**
   - Each script begins with a description of the required input formats and an example of how to call the function.
 - **Software requirements:**
-  - This tool has been tested on RStudio (v4.5.0) and dependencies include data.table_1.17.0 and fmsb_0.7.6.
+  - This tool has been tested on RStudio (v4.5.0) and dependencies include data.table_1.17.8 and fmsb_0.7.6.
 - **Installation:**
   - No installation is needed, just run the code in Rstudio, and apply the function afterwards.
 - **License:**
@@ -117,7 +117,7 @@ These functions combine multiple polygenic *scored* files into a single multi-PG
 
 ## Generate the final multi-trait PGS file
 
-We then used the following [script](https://github.com/poeyahay/AFib_PGS/blob/main/06.%20Combine/Combi.sh) to combine the eight trait-specific polygenic *scoring* files into a single multi-trait *scoring* file (CPRA, SNP, A1, BETA).  
+We then used the following [bash shell script](https://github.com/poeyahay/AFib_PGS/blob/main/06.%20Combine/Combi.sh) to combine the eight trait-specific polygenic *scoring* files into a single multi-trait *scoring* file (CPRA, SNP, A1, BETA).  
 
 **How we did this:**
 For each trait-specific *scoring* file, the SNP-level effect sizes (BETA) were multiplied by that trait’s unscaled regression coefficient, obtained from the **.unscaled.regcoef.csv** output of the adapted Multi tool. SNPs shared across trait-specific files were then matched, and their updated effect sizes were summed. This produced the final combined multi-trait PGS *scoring* file.
@@ -148,6 +148,9 @@ Three inputs are needed for the analysis script:
 2. **POP_IIDs.csv** files (e.g., `AFR_IIDs.csv`) — each file contains a single column (`IID`) listing individuals belonging to a specific ancestry group. These files are needed for ancestry-specific validation analyses.
 
 3. **Ancestry-specific AF prevalence** within All of Us — computed during step 6 of the [Split_TuneVal.sh](https://github.com/poeyahay/AFib_PGS/blob/main/Split%20Dataset/Split_TuneVal.sh) script and required for liability R² estimation.
+
+**Software requirements:**
+  - This tool has been tested on RStudio (v4.5.0) and dependencies include dplyr_1.1.4, data.table_1.17.8, pROC_1.19.0.1, PRROC_1.4, fmsb_0.7.6, and ggplot2_4.0.0.
 
 #### Dummy data:
 - [PGS_Dataset](https://drive.google.com/file/d/1OY-vnxmUq-1l1IdVrqyfd0tksRHKNFYS/view?usp=drive_link)
