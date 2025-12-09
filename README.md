@@ -23,9 +23,7 @@ This repository provides a full walkthrough of how we generated our multi-trait 
 
 For the traits atrial fibrillation (AF) and systolic blood pressure (SBP), we performed genome-wide association study (GWAS) meta-analyses using **METAL**.
 
-Pre- and postprocessing steps for METAL:
-
-Documented in the *Supplementary Materials* of our paper, in the section titled **“Meta-analysis using METAL”**.
+Required pre- and postprocessing steps: Documented in the *Supplementary Materials* of our paper, in the section titled **“Meta-analysis using METAL”**.
 
 Execution scripts for each meta-analysis are available here:
 
@@ -42,7 +40,13 @@ These scripts were run on a high-performance computing (HPC) cluster, after inst
 
 ## Preprocess trait-specific GWAS summary statistics
 
-Preprocessing steps for the trait-specific GWAS summary statistics, before SBayesRC input, are detailed in the *Supplementary Materials* of our paper, within the section **“PGS generation using SBayesRC”** and the subsections *“Input file formatting”* and *“Data conversion and preprocessing.”*
+Preprocessing steps for the trait-specific GWAS summary statistics, before SBayesRC input, are detailed in the *Supplementary Materials* of our paper.
+
+Relevant sections include:
+
+- **PGS generation using SBayesRC**
+  - *Input file formatting*
+  - *Data conversion and preprocessing*
 
 ## Run SBayesRC
 
@@ -58,7 +62,13 @@ This script was also run on a HPC cluster, after installation of the SBayesRC so
 
 ## Postprocess SBayesRC output
 
-Postprocessing steps for the SBayesRC outputs are detailed in the *Supplementary Materials* of our paper, within the section **“PGS generation using SBayesRC”** and the subsections *“Output processing”* and *“Full alignment with All of Us variants.”*
+Postprocessing steps for the SBayesRC outputs are detailed in the *Supplementary Materials* of our paper.
+
+Relevant sections include:
+
+- **PGS generation using SBayesRC**
+   - *Output processing*
+   - *Full alignment with All of Us variants*
 
 ## Score trait-specific PGSs with PLINK2
 
