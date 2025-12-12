@@ -192,7 +192,7 @@ It also requires **three inputs**:
    - polygenic *scored* file — PGS value per individual
    - principal components — `PC1–PC20`
 
-**Important:** Exclude all tuning-set IIDs from this dataset before running the analysis.
+**Important:** ^^ Exclude all tuning-set IIDs from this dataset before running the analysis.
 
 2. **POP_IIDs.csv** files (e.g., `AFR_IIDs.csv`)
    - Single column (`IID`) listing individuals of a specific ancestry
