@@ -14,17 +14,19 @@ no_VA <- FALSE
 # Define validation set ancestry/population (POP) & polygenic score (PGS) combinations!
 POP_list <- list(
   EUR = c("PGS1", "PGS2", "PGS3"),
-  AFR = c("PGS1", "PGS2", "PGS3"),
   AMR = c("PGS1", "PGS2", "PGS3"),
-  ASN = c("PGS1", "PGS2", "PGS3")
+  AFR = c("PGS1", "PGS2", "PGS3"),
+  SAS = c("PGS1", "PGS2", "PGS3"),
+  EAS = c("PGS1", "PGS2", "PGS3")
 )
 
 # AF prevalence: calculated in the All of Us dataset (see Split_TuneVal.sh script; step 6)
 prevalence_list <- list(
   EUR = 0.089,  # European
-  AFR = 0.047,  # African
   AMR = 0.036, # Admixed American
-  ASN = 0.027  # Asian
+  AFR = 0.047,  # African
+  SAS = 0.023,  # South Asian
+  EAS = 0.029  # East Asian
 )
 
 # Load necessary packages

@@ -6,7 +6,7 @@
 
 ## patient_info.csv ## is a dataset containing, at least, the following information:
 # individual IDs (IID), 
-# ancestry predictions (e.g. eur/afr/amr/eas/sas)
+# ancestry predictions (e.g. eur/amr/afr/sas/eas)
 # sex at birth (1 = male, 0 = female); change this if you think female should be 1.
 # available electronic health record data (1 = yes, 0 = no)
 
@@ -85,7 +85,7 @@ awk -F, 'BEGIN {OFS=","} $4 == "eas" {print $1,$2}' AF_Tune_Check_File.csv > ${p
 
 ## List the cases/controls of AF for each ancestry in the Tune set!
 # Change the populations (POPs) as needed
-for POP in eur afr amr eas sas mid oth; do
+for POP in eur amr afr sas eas mid oth; do
     controls_pop=$(awk -F, -v pop="$POP" '$4 == pop && $3 == 0 {count++} END {print count}' AF_Tune_Check_File.csv)
     cases_pop=$(awk -F, -v pop="$POP" '$4 == pop && $3 == 1 {count++} END {print count}' AF_Tune_Check_File.csv)
     echo "# $POP: $cases_pop/$controls_pop"
@@ -99,7 +99,7 @@ done
 
 ## Calculate prevalence of AF for each ancestry
 # Change the populations (POPs) as needed
-for POP in eur afr amr eas sas mid oth; do
+for POP in eur amr afr sas eas mid oth; do
     total_pop=$(awk -F, -v pop="$POP" '$4 == pop {count++} END {print count}' AF_preTune_file.csv)
     cases_pop=$(awk -F, -v pop="$POP" '$4 == pop && $3 == 1 {count++} END {print count}' AF_preTune_file.csv)
     if [ "$total_pop" -gt 0 ]; then

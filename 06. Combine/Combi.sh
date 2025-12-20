@@ -1,7 +1,7 @@
 ### Script to combine the trait-specific PGSs into a combined multi-trait PGS, using the weights from the adapted multi-tool ###
 
 ## 1 ##  Remove first and last lines of the unscaled regression coefficient files (obtained from the output of the adapted Multi tool)
-for POP in EUR AFR AMR ASN; do
+for POP in EUR AFR AMR SAS EAS; do
     input_file="Mult_t_${POP}.unscaled.regcoef.csv"
     tmp_file="Mult_t_${POP}.unscaled.regcoef.tmp"
     # Delete first and last line
@@ -36,7 +36,7 @@ score_files=(
     /path/to/input/score/files/PR_SBayesRC_Score_File.txt
 )
 
-for POP in EUR AFR AMR ASN; do
+for POP in EUR AFR AMR SAS EAS; do
     # Create temporary (.tmp) files, for each trait, with BETA column multiplied by the weight (from the unscaled regcoef file)
     for i in "${!traits[@]}"; do
         trait=${traits[$i]} # Set current trait

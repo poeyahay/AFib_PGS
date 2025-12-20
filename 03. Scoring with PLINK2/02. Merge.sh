@@ -4,7 +4,7 @@
 cd /path/to/results
 
 ## Merge!
-for trait in AF CAD Height PR BMI DCM HF SBP; do
+for trait in AF HF BMI Height CAD SBP DCM PR; do
   # Create an empty file to store the merged results
   > ${trait}_merged_PRS_interim.txt
 
@@ -25,12 +25,12 @@ done
 
 
 ## Convert to CSV (needed for Multi tool input)
-for trait in AF CAD Height PR BMI DCM HF SBP; do
+for trait in AF HF BMI Height CAD SBP DCM PR; do
 tr -s ' \t' ',' < ${trait}_Scored_File.txt > ${trait}_Scored_File.csv
 done
 
 
 # Remove the per-chromosome scored files
-for trait in AF CAD Height PR BMI DCM HF SBP; do
+for trait in AF HF BMI Height CAD SBP DCM PR; do
 rm ${trait}_Scored_File_chr*.sscore
 done

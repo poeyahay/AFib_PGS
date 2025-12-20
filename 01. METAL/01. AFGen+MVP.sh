@@ -1,4 +1,4 @@
-for POP in EUR AFR AMR ALL; do
+for POP in EUR AMR AFR ALL; do
 metal <<EOF
 # Paste the script in METAL
 SCHEME STDERR        # Use standard error for inverse variance weighted meta-analysis
