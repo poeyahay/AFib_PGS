@@ -1,4 +1,4 @@
-### Flip the reference and alternate alleles of the PGS file to match PLINK2 pvar files of your (AoU) dataset ###
+### Flip the reference and alternate alleles of the PGS file to match the PLINK2 pvar files of your (AoU) dataset ###
 
 ####################################################################################################
 
@@ -27,8 +27,8 @@ FNR>1 && !($1 in a) {
  split($1, CPRA, ":");    # Split CPRA column of PGS file into components
  print CPRA[1]":"CPRA[2]":"CPRA[4]":"CPRA[3], $2, $3, $4}' \    # REMOVE THIS COMMENT: Print all non-matching variants with flipped alleles (+ SNP, A1 & BETA columns)
 /path/to/pfiles/pfile_merged_pvar.txt \
-/path/to/scripts/${trait}_SBayesRC_Score_File.txt \
-> /path/to/scripts/${trait}_non_matching_variants.txt
+/path/to/PGS/${trait}_SBayesRC_Score_File.txt \
+> /path/to/PGS/${trait}_non_matching_variants.txt
 done
 
 
@@ -38,5 +38,5 @@ done
 ## 3 ##  Append the non-matching and flipped variants to the original PGS file
 
 for trait in AF; do
-cat ${trait}_non_matching_variants.txt >> ${trait}_SBayesRC_Score_File.txt
+cat /path/to/PGS/${trait}_non_matching_variants.txt >> /path/to/PGS/${trait}_SBayesRC_Score_File.txt
 done
