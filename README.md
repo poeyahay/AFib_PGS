@@ -74,7 +74,7 @@ Relevant subsections include:
 
 - PGS generation using SBayesRC
   - *Output processing*
-  - *Full alignment with All of Us variants*
+  - *Full alignment with All of Us variants* ([Bash Shell Script](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/03.%20Scoring%20with%20PLINK2/01.%20Reference_Allele_Flip.sh))
 
 ## Score trait-specific PGSs with PLINK2
 
@@ -87,14 +87,14 @@ The SBayesRC-derived polygenic *scoring* files, containing the following columns
 
 were scored with **PLINK2** within the All of Us biobank.
 
-Scoring was performed per chromosome, using this [Bash Shell Script](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/03.%20Scoring%20with%20PLINK2/01.%20Score.sh), with AF used as an example trait.
+Scoring was performed per chromosome, using this [Bash Shell Script](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/03.%20Scoring%20with%20PLINK2/02.%20Score.sh), with AF used as an example trait.
 
 The resulting per-chromosome *scored* files were then merged into a single *scored* file, with the following columns:
 
 - `IID` — individual ID
 - `SCORE1_SUM` — polygenic score per individual
 
-Merging was performed using this [Bash Shell Script](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/03.%20Scoring%20with%20PLINK2/02.%20Merge.sh)
+Merging was performed using this [Bash Shell Script](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/03.%20Scoring%20with%20PLINK2/03.%20Merge.sh)
 
 ## Split dataset
 
