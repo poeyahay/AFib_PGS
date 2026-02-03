@@ -141,7 +141,7 @@ These functions combine multiple polygenic *scored* files into a single multi-PG
 - **License:**
   - [GNU General Public License](https://github.com/poeyahay/AF_MultiTrait_PGS/blob/main/05.%20Multi%20tools/LICENSE)
 
-#### Dummy data:
+#### Dummy data (runtime: almost instantly):
 
 - [PRS1](https://drive.google.com/file/d/1pidftXIenQ5NYy_IrmX9hccsf5veX1zl/view?usp=drive_link) • [PRS2](https://drive.google.com/file/d/1iez_AQV9bQFqzHDeqAuXD_DXbqGoiVvG/view?usp=drive_link) • [PRS3](https://drive.google.com/file/d/1nqV3_YAlwzFHC2hai1f9V0KDqviiN0_5/view?usp=drive_link) • [tuneid](https://drive.google.com/file/d/16USsSVtZHhk9gb-vna6mYn3ngzLIPs86/view?usp=drive_link) • [pheno](https://drive.google.com/file/d/1Atuo9NX-wUJqkDRG4uRPLU7hBc5lKAAz/view?usp=drive_link) • [keepid](https://drive.google.com/file/d/1cFKB3VXLg72zKoeIh6zBSckz7Z1lKHwq/view?usp=drive_link)
 
@@ -212,7 +212,7 @@ RStudio v4.5.0
 - `fmsb_0.7.6`
 - `ggplot2_4.0.0`
 
-#### Dummy data:
+#### Dummy data (runtime: almost instantly):
 
 - [PGS_Dataset](https://drive.google.com/file/d/1OY-vnxmUq-1l1IdVrqyfd0tksRHKNFYS/view?usp=drive_link)
 - [EUR_IIDs](https://drive.google.com/file/d/1R1BBlE3y9Dj2ydpOR5F-Lw_ItL60JVMc/view?usp=drive_link) • [AMR_IIDs](https://drive.google.com/file/d/1iMVegA0ehEaWJORoB58Xi2U-GiNqBMuI/view?usp=drive_link) • [AFR_IIDs](https://drive.google.com/file/d/116KjWQKS8v73sUc2w7lAr3yqJK5b-USU/view?usp=drive_link) • [SAS_IIDs](https://drive.google.com/file/d/1_M8L0XSwhA72mb7XdApirDEJvS7U_A4E/view?usp=drive_link) • [EAS_IIDs](https://drive.google.com/file/d/1HM4-69CNNq9XXjJb4rPuwbzxtq8SRLMc/view?usp=drive_link)
