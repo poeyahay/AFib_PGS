@@ -1,4 +1,7 @@
-### Script for analyzing the polygenic scores and extracting the performance metrics ##
+#' @title Analysis script: to analyze polygenic scores and extract performance metrics.
+#' @dependencies dplyr_1.1.4, data.table_1.17.8, pROC_1.19.0.1, PRROC_1.4, fmsb_0.7.6, ggplot2_4.0.0
+#' @license: GPL-3.0 License
+#' @author: Poeya Haydarlou
 
 ## First run helper functions: LiabR2_func.R & Summary_Table.R
 
